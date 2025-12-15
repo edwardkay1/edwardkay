@@ -6,7 +6,8 @@ export interface Project {
   description: string;
   liveLink: string;
   isDesign: boolean; // True for the "Creative Designs" section
-  imagePath: string; // Will use shami.png for demo
+  imagePath: string;
+  githubLink: string; // Will use shami.png for demo
 }
 
 export const projectsData: Project[] = [
@@ -16,6 +17,7 @@ export const projectsData: Project[] = [
     client: 'MSCSC',
     description: 'A vibrant React/Node website celebrating science, math, and space exploration. The platform features engaging events, exclusive member profiles, and forums to foster community and inspire learning.',
     liveLink: '#',
+    githubLink: '#',
     isDesign: false,
     imagePath: '/assets/images/shami.png', // Placeholder image
   },
@@ -25,6 +27,7 @@ export const projectsData: Project[] = [
     client: 'Private Client',
     description: 'A sleek, mobile-first weather application built with a modern framework that provides real-time forecasts, radar maps, and severe weather alerts.',
     liveLink: '#',
+    githubLink: '#',
     isDesign: false,
     imagePath: '/assets/images/shami.png', 
   },
@@ -36,6 +39,7 @@ export const projectsData: Project[] = [
     description: 'Checkout page designed for optimizing the user purchase journey. From Astro Mart which is a high quality e-commerce website featuring new and high-quality products.',
     liveLink: '#',
     isDesign: true,
+    githubLink: '#',
     imagePath: '/assets/images/shami.png', 
   },
   {
@@ -44,6 +48,7 @@ export const projectsData: Project[] = [
     client: 'MSCSC',
     description: 'A clean and intuitive Admin Panel dashboard for MSCSC management, enabling efficient updates to events and content. A reliable and user-friendly tool for the team to keep the site dynamic.',
     liveLink: '#',
+    githubLink: '#',
     isDesign: true,
     imagePath: '/assets/images/shami.png', 
   },

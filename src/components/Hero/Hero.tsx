@@ -6,19 +6,19 @@ const Hero = () => {
     <section className="text-white py-24 md:py-32 text-center">
       <div className="container mx-auto px-4 max-w-4xl">
         <p className="flex items-center justify-center text-gray-400 mb-4 text-sm tracking-widest">
-          <MapPin className="w-4 h-4 mr-2" /> Dhaka, Bangladesh
+          <MapPin className="w-4 h-4 mr-2" /> Kampala, Uganda
         </p>
         
         <h1 className="text-5xl md:text-7xl font-extrabold leading-tight mb-4">
-          I'm Edward Kay <br />
+          I'm Edward Kayiira <br />
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-500">
             Web Developer
           </span>
         </h1>
         
         <p className="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-          I specialize in researching and analyzing your brand and provide you a beautiful and effective 
-          website for making a digital standing among your competitors.
+          I research and analyze your brand to deliver a beautiful and effective 
+          website that establishes your digital presence and sets you apart from competitors
         </p>
 
         <div className="flex justify-center space-x-4">
@@ -32,18 +32,36 @@ const Hero = () => {
 
         {/* Technologies I Use - Simplified for Hero */}
         <div className="mt-16 pt-8 border-t border-gray-800">
-            <h3 className="text-gray-400 text-sm tracking-wider uppercase mb-4">Technologies I Use</h3>
-            <div className="flex flex-wrap justify-center gap-4 text-gray-500 text-sm">
-                <span>JavaScript</span>
-                <span>Reactjs</span>
-                <span>Node</span>
-                <span>Express</span>
-                <span>Tailwind CSS</span>
-                <span>Figma</span>
-                <span>Git</span>
-                <span>MongoDB</span>
-            </div>
-        </div>
+    <h3 className="text-center text-gray-400 text-sm tracking-wider uppercase mb-6">
+        Technologies I Use
+    </h3>
+    <div className="flex flex-wrap justify-center gap-6 text-gray-500 font-medium text-sm">
+        <span className="hover:text-teal-400 transition-colors duration-300 cursor-default">
+            JavaScript
+        </span>
+        <span className="hover:text-teal-400 transition-colors duration-300 cursor-default">
+            Reactjs
+        </span>
+        <span className="hover:text-teal-400 transition-colors duration-300 cursor-default">
+            Node
+        </span>
+        <span className="hover:text-teal-400 transition-colors duration-300 cursor-default">
+            Express
+        </span>
+        <span className="hover:text-teal-400 transition-colors duration-300 cursor-default">
+            Tailwind CSS
+        </span>
+        <span className="hover:text-teal-400 transition-colors duration-300 cursor-default">
+            Figma
+        </span>
+        <span className="hover:text-teal-400 transition-colors duration-300 cursor-default">
+            Git
+        </span>
+        <span className="hover:text-teal-400 transition-colors duration-300 cursor-default">
+            MongoDB
+        </span>
+    </div>
+</div>
 
       </div>
     </section>

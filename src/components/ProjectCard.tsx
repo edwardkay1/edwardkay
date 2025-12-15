@@ -1,7 +1,8 @@
 import React from 'react';
 // NOTE: Adjust the path below if your projects type is not in a 'data' folder
 import type { Project } from '../data/projects'; 
-import { ArrowRight } from 'lucide-react';
+import {Github, ExternalLink } from 'lucide-react'; 
+// NOTE: I'm using ExternalLink for the View Demo button
 
 interface ProjectCardProps {
   project: Project;
@@ -9,6 +10,11 @@ interface ProjectCardProps {
 }
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project, isDesign = false }) => {
+  // Common Button Styles
+  const buttonBaseClasses = "flex items-center space-x-2 text-sm font-medium transition-colors duration-300";
+  const demoButtonClasses = `px-4 py-2 bg-teal-500 text-black hover:bg-teal-400 rounded-md ${buttonBaseClasses}`;
+  const githubButtonClasses = `px-4 py-2 text-gray-400 hover:text-white rounded-md ${buttonBaseClasses}`;
+
   if (isDesign) {
     // Layout for the Creative Designs Carousel
     return (
@@ -23,9 +29,32 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isDesign = false }) 
         <p className="text-gray-400 text-xs mb-1 uppercase tracking-widest">{project.client}</p>
         <h4 className="text-xl font-semibold text-white mb-2">{project.title}</h4>
         <p className="text-gray-500 text-sm mb-4">{project.description}</p>
-        <a href={project.liveLink} className="text-teal-400 text-sm font-medium flex items-center hover:text-white transition-colors">
-          Learn More <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
-        </a>
+        
+        {/* UPDATED: View Demo and GitHub Buttons (Design Layout) */}
+        <div className="flex space-x-3 mt-2">
+            {project.liveLink && (
+              <a 
+                href={project.liveLink} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={demoButtonClasses}
+              >
+                <ExternalLink className="w-4 h-4" />
+                <span>View Demo</span>
+              </a>
+            )}
+            {project.githubLink && (
+              <a 
+                href={project.githubLink} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={githubButtonClasses}
+              >
+                <Github className="w-4 h-4" />
+                <span>GitHub</span>
+              </a>
+            )}
+        </div>
       </div>
     );
   }
@@ -40,6 +69,33 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isDesign = false }) 
             {project.title}
           </h4>
           <p className="text-gray-500 text-base max-w-lg">{project.description}</p>
+          
+          {/* UPDATED: View Demo and GitHub Buttons (List Layout) */}
+          <div className="flex space-x-4 mt-4">
+            {project.liveLink && (
+              <a 
+                href={project.liveLink} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={demoButtonClasses}
+              >
+                <ExternalLink className="w-4 h-4" />
+                <span>View Demo</span>
+              </a>
+            )}
+            {project.githubLink && (
+              <a 
+                href={project.githubLink} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className={githubButtonClasses}
+              >
+                <Github className="w-4 h-4" />
+                <span>GitHub</span>
+              </a>
+            )}
+          </div>
+          
         </div>
         <div className="w-56 h-32 ml-8 flex-shrink-0 bg-gray-800 rounded-lg overflow-hidden transition-transform duration-500 group-hover:scale-[1.03]">
           <img 
@@ -49,9 +105,6 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, isDesign = false }) 
           />
         </div>
       </div>
-      <a href={project.liveLink} className="mt-2 text-teal-400 text-sm font-medium flex items-center hover:text-white transition-colors">
-        Learn More <ArrowRight className="w-4 h-4 ml-2" />
-      </a>
     </div>
   );
 };

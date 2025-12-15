@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
         
         {/* Logo/Name */}
         <a href="#home" className="text-2xl font-bold text-white tracking-wider hover:text-teal-400 transition duration-300">
-          EdwardKay
+          Edward<span className='text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-cyan-500'>kay</span>
         </a>
 
         {/* Desktop Nav Items */}
