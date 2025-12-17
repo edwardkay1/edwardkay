@@ -24,7 +24,7 @@ const ProjectsSection: React.FC = () => {
     <section id="projects" className="py-20 bg-black">
       <div className="container max-w-6xl px-4 mx-auto">
         
-        {/* 1. Main Projects List */}
+
         <h2 className="mb-12 text-4xl font-bold text-white md:text-5xl">
           Selected Client Work
         </h2>
