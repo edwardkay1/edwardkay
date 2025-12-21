@@ -2,6 +2,7 @@ import shamiImage from '../assets/shami.png';
 import owojaImage from '../assets/owojaImage.png'; 
 import kamuImage from '../assets/kamuImage.png'; 
 import nkoziImage from '../assets/nkozi.png'; 
+
 import oldImage from '../assets/redesign.jpg'; 
 
 export interface Project {
