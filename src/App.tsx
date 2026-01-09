@@ -10,7 +10,7 @@ function App() {
   const [activeTab, setActiveTab] = useState('About');
   const contentRef = useRef<HTMLElement>(null);
 
-  const slideUpVariants = {
+  const slideUpVariants: Variants = { // Add the type here
     initial: { opacity: 0, y: 20 },
     animate: { 
       opacity: 1, 
@@ -23,7 +23,6 @@ function App() {
       transition: { duration: 0.2 } 
     }
   };
-
   const handleTabChange = (tab: string) => {
     setActiveTab(tab);
     
